@@ -9,6 +9,6 @@ class certificateType extends Model
 {
     use HasFactory;
     public function certifications() {
-        return $this->hasMany(Certifications::class);
+        return $this->hasMany(Certification::class);
     }
 }

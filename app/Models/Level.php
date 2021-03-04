@@ -10,6 +10,6 @@ class Level extends Model
     use HasFactory;
 
     public function course_levels() {
-        return $this->hasMany(CourseLevels::class);
+        return $this->hasMany(CourseLevel::class);
     }
 }

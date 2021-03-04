@@ -9,7 +9,7 @@ class Certification extends Model
 {
     use HasFactory;
     public function certificate_types() {
-        return $this->hasMany(certificateTypes::class);
+        return $this->hasMany(certificateType::class);
     }
 
     public function course_info() {

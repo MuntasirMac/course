@@ -10,10 +10,10 @@ class CourseDesign extends Model
     use HasFactory;
 
     public function course_infos() {
-        return $this->hasMany(CourseInfos::class);
+        return $this->hasMany(CourseInfo::class);
     }
 
     public function designs() {
-        return $this->hasMany(Designs::class);
+        return $this->hasMany(Design::class);
     }
 }

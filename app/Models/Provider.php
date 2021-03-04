@@ -10,6 +10,6 @@ class Provider extends Model
     use HasFactory;
 
     public function course_infos() {
-        return $this->hasMany(CourseInfos::class);
+        return $this->hasMany(CourseInfo::class);
     }
 }

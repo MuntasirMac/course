@@ -9,7 +9,7 @@ class AwardingBody extends Model
 {
     use HasFactory;
 
-    public function reed_course_info() {
+    public function reed_course_infos() {
         return $this->hasMany(ReedCourseInfo::class);
     }
 }

@@ -8,23 +8,23 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     use HasFactory;
-    public function cart() {
+    public function carts() {
         return $this->hasMany(Cart::class);
     }
 
     public function reviews() {
-        return $this->hasMany(Reviews::class);
+        return $this->hasMany(Review::class);
     }
 
     public function reed_daily_sales() {
-        return $this->hasMany(ReedDailySales::class);
+        return $this->hasMany(ReedDailySale::class);
     }
     
     public function daily_sales() {
-        return $this->hasMany(DailySales::class);
+        return $this->hasMany(DailySale::class);
     }
 
-    public function listing_daily_sale() {
-        return $this->hasMany(ListingDailySale::class);
+    public function marketplaces_daily_sales() {
+        return $this->hasMany(MarketplaceDailySale::class);
     }
 }

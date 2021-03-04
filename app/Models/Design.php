@@ -9,7 +9,7 @@ class Design extends Model
 {
     use HasFactory;
 
-    public function course_design() {
+    public function course_designs() {
         return $this->hasMany(CourseDesign::class);
     }
 }

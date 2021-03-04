@@ -13,7 +13,7 @@ class Module extends Model
         return $this->belongsTo(Quizzes::class);
     }
 
-    public function course_module() {
+    public function course_modules() {
         return $this->hasMany(CourseModule::class);
     }
 

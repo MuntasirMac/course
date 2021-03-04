@@ -14,6 +14,6 @@ class Dailysale extends Model
     }
 
     public function course_infos() {
-        return $this->hasMany(CourseInfos::class);
+        return $this->hasMany(CourseInfo::class);
     }
 }

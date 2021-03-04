@@ -22,7 +22,7 @@ class CourseInfo extends Model
     }
 
     public function course_categories() {
-        return $this->hasMany(CourseCategories::class);
+        return $this->hasMany(CourseCategory::class);
     }
 
     public function course_level() {
@@ -30,7 +30,7 @@ class CourseInfo extends Model
     }
 
     public function course_modules() {
-        return $this->hasMany(CourseModules::class);
+        return $this->hasMany(CourseModule::class);
     }
 
     public function course_design() {
@@ -38,7 +38,7 @@ class CourseInfo extends Model
     }
 
     public function orders() {
-        return $this->hasMany(Orders::class);
+        return $this->hasMany(Order::class);
     }
 
     public function reed_course_info() {
@@ -46,18 +46,18 @@ class CourseInfo extends Model
     }
 
     public function daily_sales() {
-        return $this->hasMany(DailySales::class);
+        return $this->hasMany(DailySale::class);
     }
 
-    public function listing_course_infos() {
-        return $this->hasMany(ListingCourseInfos::class);
+    public function marketplace_course_infos() {
+        return $this->hasMany(MarketplaceCourseInfo::class);
     }
 
     public function modules() {
-        return $this->hasMany(Modules::class);
+        return $this->hasMany(Module::class);
     }
 
     public function reviews() {
-        return $this->hasMany(Reviews::class);
+        return $this->hasMany(Review::class);
     }
 }

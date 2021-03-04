@@ -16,8 +16,8 @@ class CreateCourseInfosTable extends Migration
         Schema::create('course_infos', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('link');
-            $table->string('subtitle');
+            $table->string('link')->nullable();
+            $table->string('subtitle')->nullable();
             $table->double('access');
             $table->double('duration');
             $table->double('original_price');
@@ -25,15 +25,15 @@ class CreateCourseInfosTable extends Migration
             $table->integer('no_of_modules');
             $table->integer('no_of_quizzes');
             $table->double('rating');
-            $table->integer('regular_or_specialization');
-            $table->text('overview');
-            $table->text('method_of_assessment');
+            $table->boolean('regular_or_specialization')->nullable();
+            $table->text('overview')->nullable();
+            $table->text('method_of_assessment')->nullable();
             $table->text('prerequisite');
-            $table->text('career_path');
-            $table->text('learning_outcome');
+            $table->text('career_path')->nullable();
+            $table->text('learning_outcome')->nullable();
             $table->string('quality');
-            $table->string('quality_type');
-            $table->boolean('manipulated_or_not');
+            $table->string('quality_type')->nullable();
+            $table->boolean('manipulated_or_not')->nullable();
             $table->foreignId('provider_id');
             $table->foreign('provider_id')->references('id')->on('providers')->onDelete('cascade');
             $table->foreignId('why_choose_id');

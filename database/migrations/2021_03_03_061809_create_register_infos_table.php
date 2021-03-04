@@ -24,8 +24,8 @@ class CreateRegisterInfosTable extends Migration
             $table->string('website')->nullable();
             $table->string('social_media')->nullable();
             $table->string('email');
-            // $table->foreignId('instructor_info_id');
-            // $table->foreign('instructor_info_id')->references('id')->on('instructor_infos')->onDelete('cascade');
+            $table->foreignId('instructor_info_id');
+            $table->foreign('instructor_info_id')->references('id')->on('instructor_infos')->onDelete('cascade');
             $table->timestamps();
         });
     }

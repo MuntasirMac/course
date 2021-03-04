@@ -16,11 +16,11 @@ class CreateListingDailysalesTable extends Migration
         Schema::create('listing_dailysales', function (Blueprint $table) {
             $table->id();
             $table->datetime('date');
-            $table->integer('order_id');
+            $table->integer('order_id')->nullable();
             $table->integer('unit_sold');
             $table->integer('course_id');
             $table->double('revenue');
-            $table->foreignId('student_id');
+            $table->foreignId('student_id')->nullable();
             $table->foreignId('listing_course_info_id');
             $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
             $table->foreign('listing_course_info_id')->references('id')->on('listing_course_infos')->onDelete('cascade');

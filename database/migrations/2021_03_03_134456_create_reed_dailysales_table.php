@@ -16,10 +16,10 @@ class CreateReedDailysalesTable extends Migration
         Schema::create('reed_dailysales', function (Blueprint $table) {
             $table->id();
             $table->datetime('date');
-            $table->integer('order_id');
-            $table->integer('unit_sold');
-            $table->integer('course_id');
-            $table->double('revenue');
+            $table->integer('order_id')->nullable();
+            $table->integer('unit_sold')->nullable();
+            $table->integer('course_id')->nullable();
+            $table->double('revenue')->nullable();
             $table->foreignId('student_id');
             $table->foreignId('reed_course_info_id');
             $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');

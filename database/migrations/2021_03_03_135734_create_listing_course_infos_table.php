@@ -21,7 +21,7 @@ class CreateListingCourseInfosTable extends Migration
             $table->double('original_price');
             $table->double('offer_price');
             $table->double('savings_percent');
-            $table->text('category');
+            $table->text('category')->nullable();
             $table->foreignId('course_info_id');
             $table->foreign('course_info_id')->references('id')->on('course_infos')->onDelete('cascade');
             $table->timestamps();

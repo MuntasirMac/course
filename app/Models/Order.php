@@ -13,7 +13,7 @@ class Order extends Model
         return $this->belongsTo(CourseInfo::class);
     }
 
-    public function cart() {
-        return $this->belongsTo(Cart::class);
+    public function carts() {
+        return $this->belongsToMany(Cart::class);
     }
 }

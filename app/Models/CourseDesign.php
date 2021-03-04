@@ -9,11 +9,11 @@ class CourseDesign extends Model
 {
     use HasFactory;
 
-    public function course_info() {
-        return $this->belongsTo(CourseInfo::class);
+    public function course_infos() {
+        return $this->hasMany(CourseInfos::class);
     }
 
-    public function design() {
-        return $this->belongsTo(Design::class);
+    public function designs() {
+        return $this->hasMany(Designs::class);
     }
 }

@@ -20,4 +20,8 @@ class Module extends Model
     public function unit() {
         return $this->hasMany(Unit::class);
     }
+
+    public function course_info() {
+        return $this->belongsTo(CourseInfo::class);
+    }
 }

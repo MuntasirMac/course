@@ -13,11 +13,11 @@ class RegisterInfo extends Model
     }
 
     public function quizzes() {
-        return $this->hasMany(Quzzes::class);
+        return $this->hasMany(Quizzes::class);
     }
 
-    public function Instructor_info() {
-        return $this->hasMany(InstructorInfo::class);
+    public function instructor_info() {
+        return $this->belongsTo(InstructorInfo::class);
     }
 
     public function course_module() {

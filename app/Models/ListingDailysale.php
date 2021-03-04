@@ -13,7 +13,7 @@ class WebDailysale extends Model
         return $this->belongsTo(Student::class);
     }
 
-    public function web_course_info() {
-        return $this->belongsTo(WebCourseInfo::class);
+    public function listing_course_infos() {
+        return $this->hasMany(ListingCourseInfos::class);
     }
 }

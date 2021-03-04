@@ -12,19 +12,19 @@ class Student extends Model
         return $this->hasMany(Cart::class);
     }
 
-    public function review() {
-        return $this->hasMany(Review::class);
+    public function reviews() {
+        return $this->hasMany(Reviews::class);
     }
 
-    public function reed_daily_sale() {
-        return $this->hasMany(ReedDailySale::class);
+    public function reed_daily_sales() {
+        return $this->hasMany(ReedDailySales::class);
     }
     
-    public function daily_sale() {
-        return $this->hasMany(DailySale::class);
+    public function daily_sales() {
+        return $this->hasMany(DailySales::class);
     }
 
-    public function web_daily_sale() {
-        return $this->hasMany(WebDailySale::class);
+    public function listing_daily_sale() {
+        return $this->hasMany(ListingDailySale::class);
     }
 }

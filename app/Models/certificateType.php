@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class certificateType extends Model
 {
     use HasFactory;
-    public function certification() {
-        return $this->hasMany(Certification::class);
+    public function certifications() {
+        return $this->hasMany(Certifications::class);
     }
 }

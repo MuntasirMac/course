@@ -13,7 +13,7 @@ class Dailysale extends Model
         return $this->belongsTo(Student::class);
     }
 
-    public function course_info() {
-        return $this->belongsTo(CourseInfo::class);
+    public function course_infos() {
+        return $this->hasMany(CourseInfos::class);
     }
 }

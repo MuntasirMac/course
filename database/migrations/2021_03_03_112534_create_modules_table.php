@@ -17,11 +17,12 @@ class CreateModulesTable extends Migration
             $table->id();
             $table->string('module_name');
             $table->integer('module_from');
-            $table->string('from_course');
+            $table->foreignId('course_info_id');
             $table->foreignId('quizzes_id');
             $table->foreignId('register_info_id');
             $table->foreign('register_info_id')->references('id')->on('register_infos')->onDelete('cascade');
             $table->foreign('quizzes_id')->references('id')->on('quizzes')->onDelete('cascade');
+            $table->foreign('course_info_id')->references('id')->on('course_infos')->onDelete('cascade');
             $table->timestamps();
         });
     }

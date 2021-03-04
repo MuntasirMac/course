@@ -9,7 +9,7 @@ class Provider extends Model
 {
     use HasFactory;
 
-    public function course_info() {
-        return $this->hasMany(CourseInfo::class);
+    public function course_infos() {
+        return $this->hasMany(CourseInfos::class);
     }
 }

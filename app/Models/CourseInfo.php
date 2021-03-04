@@ -21,35 +21,43 @@ class CourseInfo extends Model
         return $this->belongsTo(Certification::class);
     }
 
-    public function course_category() {
-        return $this->hasMany(CourseCategory::class);
+    public function course_categories() {
+        return $this->hasMany(CourseCategories::class);
     }
 
     public function course_level() {
-        return $this->hasMany(CourseLevel::class);
+        return $this->belongsTo(CourseLevel::class);
     }
 
-    public function course_module() {
-        return $this->hasMany(CourseModule::class);
+    public function course_modules() {
+        return $this->hasMany(CourseModules::class);
     }
 
     public function course_design() {
-        return $this->hasMany(CourseDesign::class);
+        return $this->belongsTo(CourseDesign::class);
     }
 
-    public function order() {
-        return $this->hasMany(Order::class);
+    public function orders() {
+        return $this->hasMany(Orders::class);
     }
 
     public function reed_course_info() {
-        return $this->hasMany(ReedCourseInfo::class);
+        return $this->belongsTo(ReedCourseInfo::class);
     }
 
-    public function daily_sale() {
-        return $this->hasMany(DailySale::class);
+    public function daily_sales() {
+        return $this->hasMany(DailySales::class);
     }
 
-    public function web_course_info() {
-        return $this->hasMany(WebCourseInfo::class);
+    public function listing_course_infos() {
+        return $this->hasMany(ListingCourseInfos::class);
+    }
+
+    public function modules() {
+        return $this->hasMany(Modules::class);
+    }
+
+    public function reviews() {
+        return $this->hasMany(Reviews::class);
     }
 }

@@ -10,6 +10,6 @@ class WhoCourseFor extends Model
     use HasFactory;
 
     public function course_infos() {
-        return $this->hasMany(CourseInfo::class);
+        return $this->hasMany(CourseInfos::class);
     }
 }

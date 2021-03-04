@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Certification extends Model
 {
     use HasFactory;
-    public function certificate_type() {
-        return $this->belongsTo(certificateType::class);
+    public function certificate_types() {
+        return $this->hasMany(certificateTypes::class);
     }
 
     public function course_info() {
-        return $this->hasMany(CourseInfo::class);
+        return $this->belongsTo(CourseInfo::class);
     }
 
 }

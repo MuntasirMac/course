@@ -15,7 +15,7 @@ class CreateWhoCourseForsTable extends Migration
     {
         Schema::create('who_course_fors', function (Blueprint $table) {
             $table->id();
-            $table->string('Who_Course_For');
+            $table->string('who_course_for');
             $table->timestamps();
         });
     }

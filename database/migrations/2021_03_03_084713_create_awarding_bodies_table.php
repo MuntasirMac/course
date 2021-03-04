@@ -15,7 +15,7 @@ class CreateAwardingBodiesTable extends Migration
     {
         Schema::create('awarding_bodies', function (Blueprint $table) {
             $table->id();
-            $table->string('Awarding_Body');
+            $table->string('awarding_body');
             $table->timestamps();
         });
     }

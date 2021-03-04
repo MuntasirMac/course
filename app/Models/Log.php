@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Log extends Model
 {
     use HasFactory;
-    public function register_infos() {
+    public function register_info() {
         return $this->belongsTo(RegisterInfo::class);
     }
 }
